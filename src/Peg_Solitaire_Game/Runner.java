@@ -4,12 +4,9 @@ import java.util.Scanner;
 
 public class Runner {
 
-    @SuppressWarnings("unused")
     public static void main(String[] args) {
         char[][] board;
         int[] moves;
-        int switch1;
-        int switch2;
         Scanner z = new Scanner(System.in);
         Scanner x = new Scanner(System.in);
         Attributes game = new Attributes("", 0, 0, 0, null, "", 0, 0, 0);
@@ -34,7 +31,6 @@ public class Runner {
         }
         game.displayBoard(board);
         game.displayData(board);
-        switch1 = 0;
 
         while (!(game.countPegsRemaining(board) == 1 || game.countMovesAvailable(board) == 0)) {
             moves = game.readValidMove(x, board);
