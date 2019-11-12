@@ -1,5 +1,3 @@
-package Peg_Solitaire_Game;
-
 import java.util.Scanner;
 
 public class Runner {
@@ -29,6 +27,8 @@ public class Runner {
         } else {
             board = game.createBoard("Simple T");
         }
+        System.out.print("\u001b[2J");
+        System.out.flush();
         game.displayBoard(board);
         game.displayData(board);
 
@@ -40,6 +40,8 @@ public class Runner {
             }
 
             game.performMove(board, moves[1], moves[0], moves[2]);
+            System.out.print("\u001b[2J");
+            System.out.flush();
             game.displayBoard(board);
             game.displayData(board);
         }
